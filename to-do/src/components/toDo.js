@@ -6,7 +6,7 @@ function ToDoList() {
     const [tasks, setTasks] = useState([])
     const [todo, setTodo] = useState("")
     const [taskCount, setTaskCount] = useState(1)
-    const [counter, setCounter] = useState(0)
+    const [count , setCount] = useState(0)
 
 
     const addFunc = () => {
@@ -47,14 +47,15 @@ function ToDoList() {
                     <div className="eachTask" key={index}>
                         <h4>{t.text}</h4>
                         <div className="counter">
-                            <button onClick={() => setCounter(counter + 1)}><i className="fas fa-plus"></i></button>
-                            {counter}
-                            <button onClick={() => setCounter(counter - 1)}><i className="fas fa-minus"></i></button>
+                            <button onClick={() => setCount(count+1)}><i className="fas fa-plus"></i></button>
+                            {count}
+                            <button onClick={() => setCount(count-1)}><i className="fas fa-minus"></i></button>
                         </div>
                         <button onClick={() => deleteTask(t.id)} className="delete">Delete</button>
                     </div>
                 ))}
             </div>
+
             
         </div>
     ) 
