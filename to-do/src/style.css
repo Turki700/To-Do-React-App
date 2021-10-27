@@ -3,3 +3,88 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+body {
+    background: rgb(164, 218, 218);
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgb(21, 82, 0);
+    width: 50%;
+    margin: 7% auto auto auto;
+    padding: 10px;
+}
+.todos {
+    width: 100%;
+    margin-top: 5%;
+}
+.todos input {
+    padding: 10px 15px;
+    display: inline-block;
+    border: none;
+    background-color: rgba(255, 255, 255, .4);
+    width: 90%;
+    color: #000;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.todos i {
+    width: 10%;
+    border-radius: 50%;
+    line-height: 43px;
+    text-align: center;
+    color: #009688;
+    cursor: pointer;
+    font-size: 38px;
+    transition: transform .3s;
+}
+.todos i:hover {
+    transform: rotate(90deg);
+}
+
+.taskContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+}
+.eachTask {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.counter {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 22px;
+}
+.counter button {
+    padding: 5px;
+    border: none;
+    background: #009688;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.delete {
+    float: right;
+    background-color: #e91e63;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
