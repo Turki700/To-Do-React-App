@@ -3,12 +3,14 @@ import React, { useState } from "react";
 
 function ToDoList() {
 
+    // States
     const [tasks, setTasks] = useState([])
     const [todo, setTodo] = useState("")
     const [taskCount, setTaskCount] = useState(1)
     const [count , setCount] = useState(0)
 
 
+    // Add Function
     const addFunc = () => {
         const newTask = {
             id: taskCount,
@@ -20,7 +22,8 @@ function ToDoList() {
         setTodo("")
         
     }
-    
+
+    // Delete Function 
     const deleteTask = (id) => {
         let x = tasks.filter((task) => task.id !== id)
 
@@ -32,6 +35,7 @@ function ToDoList() {
         <div className="todo">
             <h1>Add Your Tasks</h1>
 
+            
             <div className="todos">
                 <input 
                     type="text" 
@@ -41,6 +45,8 @@ function ToDoList() {
                 />
                 <i className="fas fa-plus-circle" onClick={addFunc}></i>
             </div>
+
+
 
             <div className="taskContent">
                 {tasks.map((t, index) => (
